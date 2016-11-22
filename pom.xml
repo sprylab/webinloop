@@ -23,7 +23,7 @@
 
     <groupId>com.sprylab.webinloop</groupId>
     <artifactId>parent</artifactId>
-    <version>0.8.4</version>
+    <version>0.8.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>WebInLoop (Parent)</name>

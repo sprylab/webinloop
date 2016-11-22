@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Selenium and report configuration</comment>
+<entry key="createTimestampDir">false</entry>
+<entry key="notifyByMail">false</entry>
+</properties>

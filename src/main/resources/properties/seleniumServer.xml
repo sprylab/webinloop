@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Default Selenium server configuration. Only experienced users should change this file. If unsure, leave empty to use the defaults.
+See http://code.google.com/p/selenium/source/browse/trunk/remote/server/src/java/org/openqa/selenium/server/RemoteControlConfiguration.java
+for argument help (note: java.io.File will map to String)</comment>
+<entry key="seleniumServerHost">localhost</entry>
+<entry key="seleniumServerPort">12751</entry>
+<entry key="avoidProxy"></entry>
+<entry key="browserSideLogEnabled"></entry>
+<entry key="debugMode"></entry>
+<entry key="debugURL"></entry>
+<entry key="dontInjectRegex"></entry>
+<entry key="dontTouchLogging"></entry>
+<entry key="ensureCleanSession"></entry>
+<entry key="firefoxProfileTemplate"></entry>
+<entry key="forcedBrowserMode"></entry>
+<entry key="honorSystemProxy"></entry>
+<entry key="htmlSuite"></entry>
+<entry key="interactive"></entry>
+<entry key="jettyThreads"></entry>
+<entry key="logOutFile"></entry>
+<entry key="logOutFileName"></entry>
+<entry key="port"></entry>
+<entry key="portDriversShouldContact"></entry>
+<entry key="profilesLocation"></entry>
+<entry key="proxyInjectionModeArg"></entry>
+<entry key="retryTimeoutInSeconds"></entry>
+<entry key="reuseBrowserSessions"></entry>
+<entry key="selfTest"></entry>
+<entry key="selfTestDir"></entry>
+<entry key="singleWindow"></entry>
+<entry key="timeoutInSeconds"></entry>
+<entry key="trustAllSSLCertificates"></entry>
+<entry key="userExtensions"></entry>
+<entry key="userJSInjection"></entry>
+</properties>

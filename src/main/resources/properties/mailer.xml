@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Dummy mailer configuration</comment>
+<entry key="mail.smtp.auth">false</entry>
+
+<entry key="reportMailFrom">webinloop@sprylab.com</entry>
+<entry key="reportMailTo">webinloop@sprylab.com</entry>
+<entry key="reportMailAttachment">zip</entry>
+<entry key="reportMailAccount">mail2</entry>
+
+<entry key="mailConnections">mail1;mail2</entry>
+<entry key="mail1.url">imap://user:pw@mail.domain.com:143</entry>
+<entry key="mail1.folder">INBOX</entry>
+<entry key="mail2.url">imap://user:pw@mail.domain.com:143</entry>
+<entry key="mail2.folder">SENT</entry>
+
+<entry key="cacheMailConnections">false</entry>
+</properties>

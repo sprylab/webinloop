@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>Dummy DB configuration</comment>
+	<entry key="dbConnections">db1;db2</entry>
+	<entry key="db1.user">test</entry>
+	<entry key="db1.password">test</entry>
+	<entry key="db1.jdbcDriver">org.apache.derby.jdbc.EmbeddedDriver</entry>
+	<entry key="db1.jdbcUrl">jdbc:derby:C:\MyDB;create=true</entry>
+	
+	<entry key="db2.user">test</entry>
+	<entry key="db2.password">test</entry>
+	<entry key="db2.jdbcDriver">org.postgresql.Driver</entry>
+	<entry key="db2.jdbcUrl">jdbc:postgresql:DB</entry>
+</properties>

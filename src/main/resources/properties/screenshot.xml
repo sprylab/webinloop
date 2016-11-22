@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Default screenshot trigger configuration</comment>
+<entry key="clickTargets">*</entry>
+<entry key="clickBefore">false</entry>
+<entry key="clickAfter">true</entry>
+<entry key="openTargets">*</entry>
+<entry key="openBefore">false</entry>
+<entry key="openAfter">true</entry>
+<entry key="waitForPageToLoadBefore">false</entry>
+<entry key="waitForPageToLoadAfter">true</entry>
+<entry key="screenhotDelayMs">0</entry>
+</properties>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Selenium and report configuration</comment>
+<entry key="browser">*firefox</entry>
+<entry key="baseUrl">target/test-classes/SeleniumSuite/tests/</entry>
+<entry key="translatorOutputDir">target/test-classes/SeleniumSuite/test-result/sources</entry>
+<entry key="logDir">target/test-classes/SeleniumSuite/test-result/logs</entry>
+<entry key="createTimestampDir">false</entry>
+<entry key="notifyByMail">false</entry>
+</properties>

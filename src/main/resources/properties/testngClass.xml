@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Default TestNG default properties</comment>
+<entry key="package">com.sprylab.webinloop</entry>
+<entry key="imports"></entry>
+<entry key="baseClass">com.sprylab.webinloop.BaseSeleniumTest</entry>
+</properties>

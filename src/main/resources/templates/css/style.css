@@ -1,0 +1,180 @@
+/*******************************************************************************
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ * 
+ * Copyright 2009 by sprylab technologies GmbH
+ * 
+ * WebInLoop - a program for testing web applications
+ * 
+ * This file is part of WebInLoop.
+ * 
+ * WebInLoop is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License version 3
+ * only, as published by the Free Software Foundation.
+ * 
+ * WebInLoop is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License version 3 for more details
+ * (a copy is included in the LICENSE file that accompanied this code).
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * version 3 along with WebInLoop.  If not, see
+ * <http://www.gnu.org/licenses/lgpl-3.0.html>
+ * for a copy of the LGPLv3 License.
+ ******************************************************************************/
+
+/*
+ * Standard CSS file for all browser
+ * 
+ * mainly defines global appearance and the style of the test results tables
+ */
+body {
+	font-family: verdana, arial;
+	font-size: 10pt;
+	margin: 20px;
+}
+
+h1 {
+	border-bottom: 1px solid #A9A9A9;
+	font-size: 14pt;
+	margin-top: 0;
+}
+
+a {
+	color: #065B91;
+}
+
+a:hover {
+	color: #0767a5;
+	text-decoration: none;
+}
+
+.dropshadow {
+	float: left;
+	background: url(../css/img/shadowAlpha.png) no-repeat bottom right
+		!important;
+	background: url(../css/img/shadow.gif) no-repeat bottom right;
+	margin: 10px 0 0 10px !important;
+	margin: 10px 0 0 5px;
+}
+
+.dropshadow img {
+	display: block;
+	position: relative;
+	background-color: #FFFFFF;
+	border: 1px solid #A9A9A9;
+	margin: -6px 6px 6px -6px;
+	padding: 4px;
+}
+
+.rounded {
+	padding: 5px;
+	border: 1px solid #A9A9A9;
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-icab-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.shadow {
+	padding: 5px 5px 5px 15px;
+	box-shadow: 2px 2px #D9D9D9;
+	-o-box-shadow: 2px 2px #D9D9D9;
+	-icab-box-shadow: 2px 2px #D9D9D9;
+	-khtml-box-shadow: 2px 2px #D9D9D9;
+	-moz-box-shadow: 2px 2px #D9D9D9;
+	-webkit-box-shadow: 2px 2px #D9D9D9;
+}
+
+input.toggle-button {
+	border: 0;
+	padding-left: 16px;
+}
+
+.toggle-close {
+	background: url(../css/img/arrow_right.png) left no-repeat;
+}
+
+.toggle-close:hover {
+	background: url(../css/img/arrow_right_hover.png) left no-repeat;
+}
+
+.toggle-open {
+	background: url(../css/img/arrow_down.png) left no-repeat;
+}
+
+.toggle-open:hover {
+	background: url(../css/img/arrow_down_hover.png) left no-repeat;
+}
+
+div.testtable-wrapper {
+	margin: 20px 0;
+	padding: 20px;
+	background: url(../css/img/logo.png) bottom right no-repeat;
+}
+
+div.buttons-wrapper {
+	margin: 10px 0;
+}
+
+div.errormessages-wrapper {
+	display: none;
+}
+
+div.errormessage {
+	float: left;
+	padding: 5px;
+	width: 160px;
+}
+
+div.screenshot {
+}
+
+div.description {
+	clear: both;
+	margin-left: 5px;
+	overflow: auto;
+	max-height: 100px;
+	max-width: 160px;
+}
+
+div.back {
+	clear: both;
+}
+
+table.test {
+	border-collapse: collapse;
+	margin: 10px 0;
+	border-style: hidden;
+}
+
+table.test caption {
+	text-align: left;
+	font-style: italic;
+	border-bottom: 1px dotted #A9A9A9;
+	margin: 5px 0;
+}
+
+table.test td,
+table.test th {
+	border: 1px dotted #A9A9A9;
+	padding: 5px;
+}
+
+table.test .success {
+	background: url(../css/img/success.png) top left repeat-x;
+}
+
+table.test .failed {
+	background: url(../css/img/failed.png) top left repeat-x;
+}
+
+table.test .notRun {
+	color: #A9A9A9;
+}
+
+table.test input.toggle-button {
+	display: block;
+}

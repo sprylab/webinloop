@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Default selenium and report configuration</comment>
+<entry key="browser">*firefox</entry>
+<entry key="createTimestampDir">false</entry>
+<entry key="notifyByMail">true</entry>
+<entry key="takeScreenshots">true</entry>
+</properties>

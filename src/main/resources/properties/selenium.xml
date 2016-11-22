@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Default Selenium and report configuration</comment>
+<entry key="browser">*firefox</entry>
+<entry key="baseUrl"></entry>
+<entry key="milliSecondsToWaitForPageToLoad">30000</entry>
+<entry key="translatorOutputDir">sources</entry>
+<entry key="logDir">logs</entry>
+<entry key="createTimestampDir">true</entry>
+<entry key="screenshotDir">report</entry>
+<entry key="testNgOutputDir">testng</entry>
+<entry key="testsuiteName">webinloop-suite</entry>
+<entry key="notifyByMail">false</entry>
+<entry key="logEcho">false</entry>
+<entry key="debugMode">false</entry>
+<entry key="leftWindowOffset">0</entry>
+<entry key="upperWindowOffset">0</entry>
+<entry key="windowWidth">1024</entry>
+<entry key="windowHeight">768</entry>
+<entry key="takeScreenshots">true</entry>
+<!-- Firefox only -->
+<entry key="takeEntirePageScreenshots">false</entry>
+</properties>

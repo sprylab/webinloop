@@ -19,6 +19,8 @@
 <entry key="windowWidth">1024</entry>
 <entry key="windowHeight">768</entry>
 <entry key="takeScreenshots">true</entry>
+<!-- GoogleChrome only -->
+<entry key="webdriver.chrome.driver">c:\jenkins\tools\chromedriver.exe</entry>
 <!-- Firefox only -->
 <entry key="takeEntirePageScreenshots">false</entry>
 </properties>

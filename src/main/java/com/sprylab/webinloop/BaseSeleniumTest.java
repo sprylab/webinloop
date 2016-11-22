@@ -50,6 +50,7 @@ import com.sprylab.webinloop.util.db.Database;
 import com.sprylab.webinloop.util.mailer.Mailer;
 import com.thoughtworks.selenium.SeleneseTestBase;
 import com.thoughtworks.selenium.SeleniumException;
+import com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor;
 
 /**
  * <p>
@@ -344,14 +345,10 @@ public class BaseSeleniumTest extends SeleneseTestBase {
      *             if error occurs during connection to Selenium server.
      */
     protected void connectToSeleniumServer() throws Exception {
-        String serverHost =
-                WiLConfiguration.getInstance().getString(WiLConfiguration.SELENIUM_SERVER_HOST_PROPERTY_KEY);
-        int serverPort = WiLConfiguration.getInstance().getInt(WiLConfiguration.SELENIUM_SERVER_PORT_PROPERTY_KEY);
-        String browser = WiLConfiguration.getInstance().getString(WiLConfiguration.BROWSER_PROPERTY_KEY);
         String baseUrl = correctBaseUrl(getBaseUrl());
 
         reporter = new ReporterTest(this.getClass().getSimpleName(), baseUrl);
-        this.selenium = new ScreenshottingSelenium(serverHost, serverPort, browser, baseUrl, reporter);
+    	this.selenium = new ScreenshottingSelenium(new WebDriverCommandProcessor(baseUrl, new WebDriverSupplier()), reporter);
     }
 
     /**

@@ -376,6 +376,11 @@ public class WiLConfiguration extends XMLPropertiesConfiguration {
     public static final String WINDOW_WIDTH_PROPERTY_KEY = "windowWidth";
 
     /**
+     * Property key for the chrome driver executable path.
+     */
+    public static final String CHROME_DRIVER_EXE_PROPERTY_KEY = "webdriver.chrome.driver";
+
+    /**
      * The actual singleton instance.
      */
     private static final WiLConfiguration INSTANCE = new WiLConfiguration();

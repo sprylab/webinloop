@@ -23,7 +23,7 @@
 
     <groupId>com.sprylab.webinloop</groupId>
     <artifactId>webinloop</artifactId>
-    <version>0.8.3</version>
+    <version>0.8.4</version>
 
     <name>WebInLoop</name>
     <description>a program for testing web applications</description>

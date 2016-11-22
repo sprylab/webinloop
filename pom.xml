@@ -11,7 +11,7 @@
     License version 3 along with WebInLoop. If not, see <http://www.gnu.org/licenses/lgpl-3.0.html> 
     for a copy of the LGPLv3 License. -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -22,11 +22,11 @@
     </parent>
 
     <groupId>com.sprylab.webinloop</groupId>
-    <artifactId>webinloop-parent</artifactId>
+    <artifactId>parent</artifactId>
     <version>0.8.4</version>
-
     <packaging>pom</packaging>
-    <name>WebInLoop</name>
+
+    <name>WebInLoop (Parent)</name>
     <description>a program for testing web applications</description>
     <url>https://github.com/sprylab/webinloop</url>
     <inceptionYear>2009</inceptionYear>
@@ -65,6 +65,12 @@
         <url>https://github.com/sprylab/webinloop</url>
         <tag>HEAD</tag>
     </scm>
+
+    <modules>
+        <module>webinloop</module>
+        <module>webinloop-maven-plugin</module>
+        <module>ant-webinloop-task</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -162,7 +168,6 @@
         </dependencies>
     </dependencyManagement>
 
-
     <build>
         <pluginManagement>
             <plugins>
@@ -199,9 +204,4 @@
         </pluginManagement>
     </build>
 
-    <modules>
-        <module>webinloop</module>
-        <module>webinloop-maven-plugin</module>
-        <module>ant-webinloop-task</module>
-    </modules>
-</project> 
+</project>

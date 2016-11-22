@@ -27,12 +27,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.sprylab.webinloop</groupId>
-        <artifactId>webinloop-parent</artifactId>
+        <artifactId>parent</artifactId>
         <version>0.8.4</version>
     </parent>
 
     <artifactId>webinloop-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
+
     <name>WebInLoop Maven Plugin</name>
 
     <dependencies>

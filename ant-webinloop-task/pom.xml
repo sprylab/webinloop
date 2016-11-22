@@ -28,11 +28,13 @@
 
     <parent>
         <groupId>com.sprylab.webinloop</groupId>
-        <artifactId>webinloop-parent</artifactId>
+        <artifactId>parent</artifactId>
         <version>0.8.4</version>
     </parent>
 
     <artifactId>ant-webinloop-task</artifactId>
+
+    <name>WebInLoop Ant Task</name>
 
     <dependencies>
         <dependency>

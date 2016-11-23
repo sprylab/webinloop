@@ -288,7 +288,6 @@ public final class Reporter {
      * @param reportsDir
      *            File handle that points to directory where the report will be
      *            stored.
-     * @return
      * @throws IOException
      *             If setting up of resource directory fails.
      */

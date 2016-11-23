@@ -91,8 +91,6 @@ public class Mailer {
 
     /**
      * Closes all connections mailer objects may have.
-     * 
-     * @throws MessagingException
      */
     public static void closeAllConnections() {
         Collection<Mailer> allMailers = instances.values();
@@ -110,6 +108,8 @@ public class Mailer {
      * accounts or a semicolon separated list of accounts that may include
      * ranges.
      * 
+     * @param operation
+     * 			  the operation to be performed
      * @param mailAccounts
      *            semicolon separated list of mail accounts to purge or * for
      *            all
@@ -185,8 +185,11 @@ public class Mailer {
     /**
      * Returns the default Mailer instance.
      * 
-     * @return instance object of Mailer
-     * @throws MessagingException
+     * @param mailAccount 
+     * 				the mail account
+     * @return the Mailer instance
+     * @throws MessagingException 
+     * 				when the Mailer could not be instantiated
      */
     public static Mailer getInstance(String mailAccount) throws MessagingException {
         Mailer mailer = instances.get(mailAccount);
@@ -461,7 +464,10 @@ public class Mailer {
     /**
      * Creates a new Mailer object and initializes the properties.
      * 
+     * @param mailAccount
+     * 			  the mail account to connect to
      * @throws MessagingException
+     * 			  if connecting to the mail account failed
      */
     protected Mailer(String mailAccount) throws MessagingException {
         this.mailAccount = mailAccount;
@@ -526,10 +532,9 @@ public class Mailer {
      *            lower bound (inclusive)
      * @param upperBound
      *            upper bound (inclusive)
-     * @param removeUnseen
-     *            true, if the UNSEEN flag should be removed from the message
      * @return array of Message[]
      * @throws MessagingException
+     * 			  if getting the messages failed
      */
     public Message[] getAllMessages(Integer lowerBound, Integer upperBound) throws MessagingException {
         Message[] allMessages = this.getAllMessages();
@@ -591,6 +596,7 @@ public class Mailer {
      *            true, if the UNSEEN flag should be removed from the message
      * @return array of Message[]
      * @throws MessagingException
+     * 			  if any operation on a mail folder failed
      */
     public Message[] getNewMessages(Integer lowerBound, Integer upperBound, boolean removeUnseen)
         throws MessagingException {
@@ -730,12 +736,14 @@ public class Mailer {
     /**
      * Sets the specific flag for a given mail account.
      * 
-     * @param mailTargetID
-     *            ID of the mail account
      * @param flag
      *            flag to set
      * @param set
      *            set it or remove it
+     * @param lowerBound
+     *            lower bound (1 for the first element)
+     * @param upperBound
+     *            upper bound (messages.length for the last element)
      * @throws MessagingException
      *             thrown when there were errors accessing a mail account
      */

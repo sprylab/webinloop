@@ -240,7 +240,7 @@ public class ScreenshottingSelenium extends DefaultSelenium {
      *             if the messages cannot be retrieved
      * @throws IOException
      *             if mail configuration cannot be read from file system
-     * @see {@link #getMail(String, boolean, boolean, boolean)}
+     * @see com.sprylab.webinloop.util.mailer.Mailer#getMail(String, boolean, boolean, boolean)
      */
     public String[] getAllMail(String mailTargetID) throws MessagingException, IOException {
         return Mailer.getMail(mailTargetID, false, false, true);
@@ -257,7 +257,7 @@ public class ScreenshottingSelenium extends DefaultSelenium {
      *             if the messages cannot be retrieved
      * @throws IOException
      *             if mail configuration cannot be read from file system
-     * @see {@link #getMail(String, boolean, boolean, boolean)}
+     * @see com.sprylab.webinloop.util.mailer.Mailer#getMail(String, boolean, boolean, boolean)
      */
     public String[] getAllMailUnseen(String mailTargetID) throws MessagingException, IOException {
         return Mailer.getMail(mailTargetID, false, false, false);
@@ -284,7 +284,7 @@ public class ScreenshottingSelenium extends DefaultSelenium {
      *             if the messages cannot be retrieved
      * @throws IOException
      *             if mail configuration cannot be read from file system
-     * @see {@link #getMail(String, boolean, boolean, boolean)}
+     * @see com.sprylab.webinloop.util.mailer.Mailer#getMail(String, boolean, boolean, boolean)
      */
     public String[] getNewMail(String mailTargetID) throws MessagingException, IOException {
         return Mailer.getMail(mailTargetID, true, false, true);
@@ -301,7 +301,7 @@ public class ScreenshottingSelenium extends DefaultSelenium {
      *             if the messages cannot be retrieved
      * @throws IOException
      *             if mail configuration cannot be read from file system
-     * @see {@link #getMail(String, boolean, boolean, boolean)}
+     * @see com.sprylab.webinloop.util.mailer.Mailer#getMail(String, boolean, boolean, boolean)
      */
     public String[] getNewMailUnseen(String mailTargetID) throws MessagingException, IOException {
         return Mailer.getMail(mailTargetID, true, false, false);
@@ -327,7 +327,7 @@ public class ScreenshottingSelenium extends DefaultSelenium {
      *             if the messages cannot be retrieved
      * @throws IOException
      *             if mail configuration cannot be read from file system
-     * @see {@link #getMail(String, boolean, boolean, boolean)}
+     * @see com.sprylab.webinloop.util.mailer.Mailer#getMail(String, boolean, boolean, boolean)
      */
     public String[] getRecentMail(String mailTargetID) throws MessagingException, IOException {
         return Mailer.getMail(mailTargetID, true, true, true);
@@ -343,7 +343,7 @@ public class ScreenshottingSelenium extends DefaultSelenium {
      *             if the messages cannot be retrieved
      * @throws IOException
      *             if mail configuration cannot be read from file system
-     * @see {@link #getMail(String, boolean, boolean, boolean)}
+     * @see com.sprylab.webinloop.util.mailer.Mailer#getMail(String, boolean, boolean, boolean)
      */
     public String[] getRecentMailUnseen(String mailTargetID) throws MessagingException, IOException {
         return Mailer.getMail(mailTargetID, true, true, false);

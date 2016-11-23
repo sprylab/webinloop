@@ -61,6 +61,8 @@ public class MailAccountParseResult {
      *            <code>mailAccount[:from-to]:mailtarget</code>
      * @return a new {@link MailAccountParseResult} instance with all relevant
      *         information set
+     * @throws MessagingException
+     * 				if the string could not be parsed
      */
     public static MailAccountParseResult parse(String string) throws MessagingException {
         MailAccountParseResult result = new MailAccountParseResult();

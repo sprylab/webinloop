@@ -116,7 +116,10 @@ public class ReporterTest {
     /**
      * Creates a new {@link ReporterTest} object.
      * 
-     * @param name
+     * @param name 
+     * 			the name
+     * @param baseUrl 
+     * 			the baseUrl
      */
     public ReporterTest(String name, String baseUrl) {
         this.name = name;

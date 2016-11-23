@@ -41,8 +41,11 @@ public abstract class AbstractTypedDirective extends Directive {
      * Creates a new directive.
      * 
      * @param command
+     *            the command
      * @param target
+     *            the target
      * @param value
+     *            the value
      */
     protected AbstractTypedDirective(String command, String target, String value) {
         super(command, target, value);

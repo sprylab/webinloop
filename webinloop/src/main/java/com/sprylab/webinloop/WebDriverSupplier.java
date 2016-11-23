@@ -28,7 +28,7 @@ public class WebDriverSupplier implements Supplier<WebDriver> {
 	        
 	        final String executable = WiLConfiguration.getInstance().getString(WiLConfiguration.CHROME_DRIVER_EXE_PROPERTY_KEY);
 	        if (executable != null) {
-	        	System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, "c:\\devel\\tools\\chromedriver.exe");
+	        	System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, executable);
 	        }
 	        
 	    	return new ChromeDriver(capability);

@@ -29,7 +29,7 @@
     <parent>
         <groupId>com.sprylab.webinloop</groupId>
         <artifactId>parent</artifactId>
-        <version>0.8.5</version>
+        <version>0.8.6-SNAPSHOT</version>
     </parent>
 
     <artifactId>ant-webinloop-task</artifactId>

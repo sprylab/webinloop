@@ -548,9 +548,6 @@ public class WebInLoop {
             launchTests();
         }
 
-        // create testng.xml file
-        createTestNgXml();
-
         sendMailReport();
     }
 

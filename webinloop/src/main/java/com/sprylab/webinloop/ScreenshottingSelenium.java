@@ -36,6 +36,9 @@ import junit.framework.Assert;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.StringUtils;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.internal.WrapsDriver;
 
 import com.sprylab.webinloop.reporter.ReporterEntry;
 import com.sprylab.webinloop.reporter.ReporterRecordLaterEntry;
@@ -516,6 +519,52 @@ public class ScreenshottingSelenium extends DefaultSelenium {
      */
     public void readMailBox(String mailTargetIDs) throws MessagingException {
         Mailer.executeMailboxOperation(Mailer.MailboxOperation.READ, mailTargetIDs);
+    }
+
+    /**
+     * Set the browser window's dimension.
+     * @param size the dimension of the browser window in the form "width,height"
+     */
+    public void setWindowSize(final String size) {
+        if (commandProcessor instanceof WrapsDriver) {
+            final String[] dims = size.split(",");
+            final int width = Integer.parseInt(dims[0]);
+            final int height = Integer.parseInt(dims[1]);
+            ((WrapsDriver)commandProcessor).getWrappedDriver().manage().window().setSize(new Dimension(width, height));
+        } else {
+            getEval("window.resizeTo(" + size + ");");
+        }
+    }
+
+    /**
+     * Move the browser window to a new position.
+     *
+     * @param position the position of the browser window in the form "x,y"
+     */
+    public void setWindowPosition(final String position) {
+        if (commandProcessor instanceof WrapsDriver) {
+            final String[] xy = position.split(",");
+            final int x = Integer.parseInt(xy[0]);
+            final int y = Integer.parseInt(xy[1]);
+            ((WrapsDriver)commandProcessor).getWrappedDriver().manage().window().setPosition(new Point(x, y));
+        } else {
+            getEval("window.moveTo(" + position + ");");
+        }
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see
+     * com.thoughtworks.selenium.DefaultSelenium#windowMaximize()
+     */
+    @Override
+    public void windowMaximize() {
+        if (commandProcessor instanceof WrapsDriver) {
+            ((WrapsDriver)commandProcessor).getWrappedDriver().manage().window().maximize();
+        } else {
+            super.windowMaximize();
+        }
     }
 
     /*

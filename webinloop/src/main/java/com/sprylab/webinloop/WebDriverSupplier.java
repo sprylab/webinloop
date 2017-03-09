@@ -3,6 +3,7 @@ package com.sprylab.webinloop;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -30,7 +31,11 @@ public class WebDriverSupplier implements Supplier<WebDriver> {
 	        if (executable != null) {
 	        	System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, executable);
 	        }
-	        
+
+			final ChromeOptions options = new ChromeOptions();
+			options.addArguments("enable-automation");
+			capability.setCapability(ChromeOptions.CAPABILITY, options);
+
 	    	return new ChromeDriver(capability);
         } else if (browser.equals("*firefox")) {
         	return new FirefoxDriver();

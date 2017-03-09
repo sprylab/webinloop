@@ -61,7 +61,8 @@ public class ${model.name} extends ${properties.baseClass} {
 				<#assign windowHeight>
 					<#if properties.windowHeight == "max">screen.height<#else>${properties.windowHeight}</#if>
 				</#assign>
-				selenium.getEval("window.resizeTo(${windowWidth?trim}, ${windowHeight?trim}); window.moveTo(0,0);");
+				selenium.setWindowSize("${windowWidth?trim},${windowHeight?trim}");
+				selenium.setWindowPosition("0,0");
 			</#if>
 		</#if>
 		

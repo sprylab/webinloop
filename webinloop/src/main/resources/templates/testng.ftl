@@ -30,6 +30,7 @@ package ${properties.package};
 import org.testng.annotations.*;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.StringEscapeUtils;
+import com.sprylab.webinloop.BaseSeleniumTest;
 import com.thoughtworks.selenium.SeleniumException;
 
 <#list properties.imports?split(";") as import>

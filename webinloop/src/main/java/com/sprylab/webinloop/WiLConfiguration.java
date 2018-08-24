@@ -391,6 +391,11 @@ public class WiLConfiguration extends XMLPropertiesConfiguration {
     private static final String SCREENSHOT_PROPERTY_FILE = "screenshot.xml";
 
     /**
+     * Property key for cookie.
+     */
+    public static final String COOKIE = "cookie";
+
+    /**
      * Gets the Configuration instance.
      * 
      * @return the configuration instance

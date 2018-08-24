@@ -98,6 +98,11 @@ public class ScreenshottingSelenium extends DefaultSelenium {
     private String timeout = "30000";
 
     /**
+     * Cookie to be set in open method.
+     */
+    private String cookie;
+
+    /**
      * Default constructor.
      * 
      * @param processor
@@ -471,8 +476,13 @@ public class ScreenshottingSelenium extends DefaultSelenium {
         String unescapedUrl = StringEscapeUtils.unescapeHtml(url);
 
         if (hasScreenhot(command, unescapedUrl, BEFORE)) {
-            recordStep("Before oepening " + unescapedUrl);
+            recordStep("Before opening " + unescapedUrl);
         }
+
+        if (cookie != null) {
+            commandProcessor.doCommand("createCookie", new String[] {cookie, "/" });
+        }
+
         super.open(unescapedUrl);
 
         if (hasScreenhot(command, unescapedUrl, AFTER)) {
@@ -691,6 +701,7 @@ public class ScreenshottingSelenium extends DefaultSelenium {
                 WiLConfiguration.getInstance().getBoolean(WiLConfiguration.TAKE_ENTIRE_PAGE_SCREENSHOTS_PROPERTY_KEY,
                         false);
         this.logEcho = WiLConfiguration.getInstance().getBoolean(WiLConfiguration.LOG_ECHO_PROPERTY_KEY, false);
+        this.cookie = WiLConfiguration.getInstance().getString(WiLConfiguration.COOKIE);
     }
 
     /**

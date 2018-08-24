@@ -29,7 +29,7 @@
     <parent>
         <groupId>com.sprylab.webinloop</groupId>
         <artifactId>parent</artifactId>
-        <version>0.9.0</version>
+        <version>0.9.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>webinloop-maven-plugin</artifactId>

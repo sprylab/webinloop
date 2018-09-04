@@ -479,11 +479,13 @@ public class ScreenshottingSelenium extends DefaultSelenium {
             recordStep("Before opening " + unescapedUrl);
         }
 
-        if (cookie != null) {
-            commandProcessor.doCommand("createCookie", new String[] {cookie, "/" });
-        }
-
         super.open(unescapedUrl);
+
+        if (cookie != null) {
+            // we have to set the cookie *after* the page was opened and re-open the page to have it read correctly afterwards
+            commandProcessor.doCommand("createCookie", new String[] {cookie, "/" });
+            super.open(unescapedUrl);
+        }
 
         if (hasScreenhot(command, unescapedUrl, AFTER)) {
             recordStep("Opened " + unescapedUrl);
